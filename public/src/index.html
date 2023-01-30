@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit</title>
+    <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="/src/my-element.js"></script>
+    <script type="module" src="/src/my-hello.js"></script>
+    <script type="module" src="/src/my-users.js"></script>
+  </head>
+
+  <body>
+    <!-- <my-element count="66">
+      <h1>Vite + Lit</h1>
+    </my-element> -->
+ 
+    <a href="/">Hello</a>
+    <a href="/element" >Counter</a>
+    <a href="/users/1">User 1</a>
+    <a href="/users/2">User 2</a>
+    <a href="/users/5">User 5</a>
+
+    <div id="outlet"></div>
+   
+<p  id="blue">
+  <label>Feet</label>
+  <input id="geel" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</p>
+<p id="blue"><em>Meters: </em> <span id="outputMeters"></span></p>
+
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputMeters").innerHTML=valNum/3.2808;
+}
+</script>
+<!-- https://www.w3schools.com/howto/howto_js_length_converter.asp -->
+
+
+  </body>
+
+
+</html>
+<style>    
+:root {
+  --first-color: #16f;
+  --second-color: #ff7;
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
+#blue {
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+
+#geel {
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+  </style>
